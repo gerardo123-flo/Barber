@@ -202,7 +202,7 @@ app.delete('/servicios/:id', (req, res) => {
     });
 });
 // Ruta para obtener todas las citas
-// Utiliza JOIN para obtener los nombres de barbero, cliente y servicio
+// Utiliza JOIN para obtener los nombres de barbero, cliente y servicio sin join no chive 
 app.get('/citas', (req, res) => {
     const sql = `
         SELECT 
