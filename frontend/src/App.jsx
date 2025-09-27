@@ -5,13 +5,6 @@ import Servicios from './components/Servicios';
 import Citas from './components/Citas';
 import './App.css';
 
-import React, { useState } from 'react';
-import Barberos from './components/Barberos';
-import Clientes from './components/Clientes';
-import Servicios from './components/Servicios';
-import Citas from './components/Citas';
-import './App.css';
-
 function App() {
     const [currentSection, setCurrentSection] = useState('barberos');
 
