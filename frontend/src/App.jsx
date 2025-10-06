@@ -1,10 +1,13 @@
+
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route, NavLink, Link } from 'react-router-dom';
+
 import Barberos from './components/Barberos';
 import Clientes from './components/Clientes';
 import Servicios from './components/Servicios';
 import Citas from './components/Citas';
 import './App.css';
+
 
 // Componente Inicio con clases CSS personalizadas
 function Inicio() {
