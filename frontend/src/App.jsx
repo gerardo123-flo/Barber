@@ -6,6 +6,7 @@ import Barberos from './components/Barberos';
 import Clientes from './components/Clientes';
 import Servicios from './components/Servicios';
 import Citas from './components/Citas';
+import Sucursales from './components/Sucursales'; // <-- 1. Importar Sucursales
 import './App.css';
 
 
@@ -27,6 +28,13 @@ function Inicio() {
           <div className="card">
             <h3>💈 Gestionar Barberos</h3>
             <p>Añade, edita o elimina a los barberos de tu equipo.</p>
+          </div>
+        </Link>
+        {/* <-- 4. Añadir tarjeta para Sucursales --> */}
+        <Link to="/sucursales" className="card-link">
+          <div className="card">
+            <h3>🏢 Gestionar Sucursales</h3>
+            <p>Añade o edita las direcciones de tus establecimientos.</p>
           </div>
         </Link>
         <Link to="/clientes" className="card-link">
@@ -74,6 +82,10 @@ function App() {
               <li className="nav-item">
                 <NavLink to="/barberos" className="nav-link" onClick={() => setIsNavExpanded(false)}>Barberos</NavLink>
               </li>
+              {/* <-- 2. Añadir enlace de navegación --> */}
+              <li className="nav-item">
+                <NavLink to="/sucursales" className="nav-link" onClick={() => setIsNavExpanded(false)}>Sucursales</NavLink>
+              </li>
               <li className="nav-item">
                 <NavLink to="/clientes" className="nav-link" onClick={() => setIsNavExpanded(false)}>Clientes</NavLink>
               </li>
@@ -95,6 +107,8 @@ function App() {
           <Route path="/clientes" element={<Clientes />} />
           <Route path="/servicios" element={<Servicios />} />
           <Route path="/citas" element={<Citas />} />
+          {/* <-- 3. Añadir la nueva ruta --> */}
+          <Route path="/sucursales" element={<Sucursales />} />
         </Routes>
       </main>
     </BrowserRouter>

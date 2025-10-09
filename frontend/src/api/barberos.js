@@ -5,20 +5,20 @@ export const getBarberos = async () => {
   return res.json();
 };
 
-export const createBarbero = async (nombre) => {
+export const createBarbero = async (nombre, sucursal_id) => {
   const res = await fetch(`${BASE_URL}/barberos`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ nombre }),
+    body: JSON.stringify({ nombre, sucursal_id }),
   });
   return res.json();
 };
 
-export const updateBarbero = async (id, nombre) => {
+export const updateBarbero = async (id, nombre, sucursal_id) => {
   const res = await fetch(`${BASE_URL}/barberos/${id}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ nombre }),
+    body: JSON.stringify({ nombre, sucursal_id }),
   });
   return res.json();
 };

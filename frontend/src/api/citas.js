@@ -9,6 +9,7 @@ export const createCita = async ({
   barbero_id,
   cliente_id,
   servicio_id,
+  sucursal_id, // Campo añadido
   fecha,
   hora,
   estado,
@@ -21,6 +22,7 @@ export const createCita = async ({
       barbero_id,
       cliente_id,
       servicio_id,
+      sucursal_id, // Campo añadido
       fecha,
       hora,
       estado,
@@ -32,7 +34,7 @@ export const createCita = async ({
 
 export const updateCita = async (
   id,
-  { barbero_id, cliente_id, servicio_id, fecha, hora, estado, notas }
+  { barbero_id, cliente_id, servicio_id, sucursal_id, fecha, hora, estado, notas } // Campo añadido
 ) => {
   const res = await fetch(`${BASE_URL}/citas/${id}`, {
     method: 'PUT',
@@ -41,6 +43,7 @@ export const updateCita = async (
       barbero_id,
       cliente_id,
       servicio_id,
+      sucursal_id, // Campo añadido
       fecha,
       hora,
       estado,
